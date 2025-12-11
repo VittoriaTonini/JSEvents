@@ -6,16 +6,12 @@
   <style>
     body {
       font-family: Calibri, sans-serif;
-      /* font della pagina */
       background-color: #f3e8ff;
-      /* colore sfondo */
       color: #9966cc;
-      /* colore testo */
     }
 
     h1 {
       font-size: 2.5em;
-      /*em indica che la misura è relativa al font del contenitore(body)*/
       margin-bottom: 10px;
     }
 
@@ -30,17 +26,11 @@
 
     button {
       padding: 20px;
-      /* 1. Imposta lo spazio interno al bottone (tra il testo e i bordi) a 20px. */
       background-color: #e3dc11;
-      /* 2. Imposta il colore di sfondo del bottone. */
       color: #9966cc;
-      /* 3. Imposta il colore del testo all'interno del bottone. */
       border: 2px solid #bcb60f;
-      /* 4. Imposta un bordo di 5px intorno al bottone. */
       border-radius: 10px;
-      /* 5. Rende gli angoli del bottone arrotondati, con un raggio di 10px. */
       cursor: pointer;
-      /* 6. Cambia il cursore quando ci passi sopra con il mouse, facendolo diventare una mano, per indicare che il bottone è cliccabile. */
     }
   </style>
 </head>
@@ -68,9 +58,9 @@
     const lastName = document.querySelector("#lname");
     const paragraph = document.querySelector("p");
 
-    form.onsubmit = function (e) {
+    form.onsubmit = function (e) { //onsubmit dentro a un form, invia il form
       if (name.value === '' || lastName.value === '') {
-        e.preventDefault();
+        e.preventDefault(); //questo evento previene il default, che in questo caso evita che il form venga inviato
         paragraph.textContent = "You need to fill in both names";
       }
     }
